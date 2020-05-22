@@ -9,9 +9,6 @@ Created on Thu May 21 18:24:17 2020
 
 
 
-matrix = [[x]+[y] for x in range(1,6) for y in range(1,6) ]
-print(matrix.reverse())
-
 
 
 
@@ -47,7 +44,6 @@ def apply(Oplist, arg_tuple):
     else:
         return apply(Oplist[1:],Oplist[0](arg_tuple))
     
-#print(apply([move_left, move_right, move_down, move_up],(2,5)))
 
 
 def addLevel(Oplist, operations):
@@ -104,7 +100,7 @@ def shortest_way(initials, goal):
     ways = []
     for initial in initials:
         ways.append(findSequence(initial, goal))  
-    #print(ways)    
+        
     return shortest_list(ways)    
         
 print(shortest_way(goals,goal))    
